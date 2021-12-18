@@ -1,10 +1,16 @@
+:root{
+    --grey: #e8e8e8;
+    --blue: #74b9ff;
+}
+
 #left{
-    background-color: antiquewhite;
+    background-color: #F8F8F8;
 }
 
 #right{
-    background-color: red;
+    background-color: #F5F5F5;
 }
+
 
 #profile-pic {
     width: 50px;
@@ -18,8 +24,96 @@
     vertical-align: baseline;
     transition: .3s ease;
 }
+
+.chat-list:hover{
+    background-color: var(--grey);
+    cursor: pointer;
+}
+
 .profile-text{
     width: 70%;
     margin-left: 12px;
+
+}
+
+.profile-name{
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+ .new-message{
+    margin: 0;   
+}
+
+.text-muted{
+    opacity: 0.5 !important;
+}
+
+hr {
+    margin: 5px auto;
+    width: 60%;
+}
+
+.chat-session{
+    display: flex;
+    padding: 10px;
+    background-color: var(--grey);
+
+}
+
+.chat-bubble{
+    padding: 10px 15px;
+    background: #eee;
+    margin: 10px 30px;
+    border-radius: 9px;
+    position: relative;
+    animation: fadeIn .1s ease-in;
+}
+
+.chat-bubble:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-bottom: 0;
+    margin-top: -10px;
+}
+
+.chat-bubble--left:after{
+    left: 0;
+    border-right-color: var(--grey);
+    border-left: 0;
+    margin-left: -20px;
+}
+
+.chat-bubble--right:after{
+    right: 0;
+    border-left-color: var(--blue);
+    border-right: 0;
+    margin-right: -20px;
+}
+
+.offset-md-9 .chat-bubble{
+    background-color: var(--blue);
+    color: #fff;
+}
+
+.chat-tray{
+    background: #F8F8F8;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-top: 20px;
+}
+
+.chat-tray i {
+    color: grey;
+    font-size: 30px;
+    vertical-align: middle;
+}
+i:last-of-type{
+    margin-left: 25px;
 }
 
